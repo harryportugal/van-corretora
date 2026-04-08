@@ -1,0 +1,212 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: black;
+    color: white;
+  }
+}
+
+@layer utilities {
+  .liquid-glass {
+    background: rgba(0, 0, 0, 0.4);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* ── Lenis ── */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* ── CinematicScroll (heading, loader, card styles below) ── */
+
+.cinematic-heading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: clamp(2rem, 6vw, 5rem);
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.6);
+  pointer-events: none;
+  margin: 0;
+}
+
+.cinematic-loader {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.cinematic-loader-spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid rgba(255,255,255,0.15);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: cinematic-spin 0.8s linear infinite;
+}
+
+@keyframes cinematic-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Vanuza Profile Card — Glassmorphic Premium ── */
+.vanuza-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(340px, 80vw);
+  aspect-ratio: 3 / 4;
+  border-radius: 40px;
+  overflow: hidden;
+  border: none;
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.55);
+  z-index: 40;
+  will-change: transform, opacity;
+}
+
+.vanuza-card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Glass blur layer — bottom half with soft gradient mask */
+.vanuza-glass-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55%;
+  background: rgba(0, 0, 0, 0.20);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  mask-image: linear-gradient(to top, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 50%, transparent 100%);
+}
+
+.vanuza-card-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+}
+
+.vanuza-card-top {
+  margin-bottom: 20px;
+}
+
+.vanuza-card-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+
+.vanuza-verified {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.vanuza-card-bio {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+.vanuza-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.vanuza-card-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.vanuza-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.vanuza-stat-num {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.vanuza-stat-lbl {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.vanuza-follow-btn {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  pointer-events: auto;
+}
+.vanuza-follow-btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
