@@ -11,7 +11,7 @@ const FRAME_COUNT = 240;
 const testimonials = [
   {
     id: 1,
-    quote: 'A Érica foi incrível! Encontrou o apartamento perfeito para nossa família em tempo recorde. Profissionalismo e dedicação do início ao fim.',
+    quote: 'A Vanuza foi incrível! Encontrou o apartamento perfeito para nossa família em tempo recorde. Profissionalismo e dedicação do início ao fim.',
     name: 'Fernanda',
     role: 'Compradora',
     imageSrc: 'https://images.unsplash.com/photo-1581403341630-a6e0b9d2d257?w=900&auto=format&fit=crop&q=80',
@@ -25,7 +25,7 @@ const testimonials = [
   },
   {
     id: 3,
-    quote: 'Uma experiência impecável do começo ao fim. A Érica tornou a compra do nosso primeiro imóvel algo especial e sem estresse.',
+    quote: 'Uma experiência impecável do começo ao fim. A Vanuza tornou a compra do nosso primeiro imóvel algo especial e sem estresse.',
     name: 'Victor',
     role: 'Comprador',
     imageSrc: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=900&auto=format&fit=crop&q=80',

@@ -111,7 +111,7 @@ export default function App() {
       <section className="relative min-h-screen w-full bg-black text-white">
         {/* Image Background */}
         <img
-          src="https://fncdavohyqdkgudjdyes.supabase.co/storage/v1/object/public/Video%20Lupa%20Hero/erica%20imoveis.png"
+          src="https://fncdavohyqdkgudjdyes.supabase.co/storage/v1/object/public/Video%20Lupa%20Hero/bebe.png"
           alt="Hero Background"
           className="absolute left-0 top-0 h-[calc(100%+6rem)] w-full object-cover"
           referrerPolicy="no-referrer"
@@ -126,7 +126,7 @@ export default function App() {
           <div className="p-4 sm:p-6 lg:p-8">
             <nav className="liquid-glass mx-auto flex w-fit items-center gap-8 rounded-full px-6 py-2">
               {/* Logo */}
-              <div className="text-xl font-semibold tracking-tight">Érica</div>
+              <div className="text-xl font-semibold tracking-tight">Vanuza</div>
 
               {/* Navigation Links */}
               <div className="flex items-center gap-6">
@@ -174,12 +174,8 @@ export default function App() {
                   transition={{ duration: 1, delay: 1.4 }}
                   className="liquid-glass rounded-2xl px-6 py-5 flex flex-col gap-2"
                 >
-                  <p className="text-xl font-semibold tracking-tight">Érica Porciúncula</p>
-                  <p className="text-sm text-white/80">Agente Imobiliário</p>
-                  <p className="text-sm text-white/90">🏠 Há 15 Anos Ajudo a Realizar Sonhos</p>
-                  <p className="text-sm text-white/80">📍 Salvador | Lauro de Freitas | Camaçari</p>
-                  <p className="text-xs text-white/70">🔸 CRECI/BA 15.583 · CNAI 53737</p>
-                  <p className="text-sm font-medium text-white/90">📲 (71) 99268-2579</p>
+                  <p className="text-xl font-semibold tracking-tight">Vanuza</p>
+                  <p className="text-sm text-white/90">Venda. Locação. Alto Padrão.</p>
                 </motion.div>
               </div>
             </div>
